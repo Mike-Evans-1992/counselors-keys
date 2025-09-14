@@ -1,4 +1,5 @@
 export interface MiddleProps {
+    quote: string;
     tier1List1: string;
     tier1List2: string;
     tier1List3: string;

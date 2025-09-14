@@ -1,7 +1,8 @@
 import { MiddleProps } from "@/types/middle";
 
 export const MIDDLE_DATA: MiddleProps = {
-    tier1List1: "Individual counseling sessions",
+    quote: "Empowering students through tailored support and resources.", 
+    tier1List1: "Other tier one option",
     tier1List2: "Personalized behavior intervention plans",
     tier1List3: "One-on-one academic support",
     tier2List1: "Small group social skills training",

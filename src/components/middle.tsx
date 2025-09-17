@@ -1,4 +1,6 @@
 import { getMiddleData } from "@/service/middleService";
+import Image from "next/image";
+import Link from "next/link";
 
 
 export default async function Middle() {
@@ -6,7 +8,7 @@ export default async function Middle() {
 
     return (
         <>
-        <div className="grid grid-cols-[.5fr_1fr_.5fr] grid-rows-[150px_1fr_1fr] w-full px-4 gap-4">    
+        <div className="grid grid-cols-[.5fr_1fr_.5fr] grid-rows-[150px_1fr_500px] w-full px-4 gap-4">    
             {/* quote */}
             <div className="col-start-1 row-start-1 flex flex-col justify-end text-right ml-[30px] px-4">
                 <p className="italic text-3xl">{data.quote}</p>
@@ -132,6 +134,44 @@ export default async function Middle() {
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            {/* Links to other pages */}
+            {/* Link to students page */}
+            <div className="col-start-1 row-start-3 flex flex-col justify-center items-end">
+                <Link href="/students" className="flex flex-col justify-center items-center">
+                    <Image 
+                        src="/students.png" 
+                        alt="students" 
+                        width={200} height={200} 
+                        className="rounded-full" />
+                    <h1 className="text-xl">Students</h1>
+                </Link>
+                
+                
+            </div>
+            {/* Link to parents page */}
+            <div className="col-start-2 row-start-3 flex flex-col justify-center items-center">
+                <Link href="/parents" className="flex justify-center items-center flex-col">
+                    <Image 
+                        src="/parents.png" 
+                        alt="parents" 
+                        width={200} height={200} 
+                        className="rounded-full" />
+                <h1 className="text-xl">Parents</h1>
+                </Link>
+                
+            </div>
+            {/* Link to staff page */}
+            <div className="col-start-3 row-start-3 flex flex-col justify-center items-start">
+                <Link href="/staff" className="flex justify-center items-center flex-col">
+                    <Image 
+                        src="/staff.png" 
+                        alt="staff" 
+                        width={200} height={200} 
+                        className="rounded-full" />
+                    <h1 className="text-xl">Staff</h1>
+                </Link>
             </div>
         </div>
         </>
